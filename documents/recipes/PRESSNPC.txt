@@ -1,0 +1,40 @@
+@VER=1
+# Possible Options:
+# DURATION, INGREDIENTS, PRODUCT, TEXTURE
+# Last line has to be [END]
+[Cornmeal]
+    DURATION=100
+    INGREDIENTS=Dried Corn,20% Hay or 20% Alfalfa or 30% Oats
+    PRODUCT=SF Cornmeal
+    TEXTURE=Tex-Corn
+[Essential Oil]
+    DURATION=100
+    INGREDIENTS=Flowers or Roses or Lavender,Oranges or Lemons or Limes,20% Hay or 20% Alfalfa or 30% Oats
+    PRODUCT=SF Essential Oil
+    TEXTURE=Tex-Flowers
+[Olive Oil]
+    DURATION=100
+    INGREDIENTS=Olives,20% Hay or 20% Alfalfa or 30% Oats
+    PRODUCT=SF Olive Oil
+    TEXTURE=Tex-Olives
+[Rolled Oats]
+    DURATION=100
+    INGREDIENTS=Oats,20% Hay or 20% Alfalfa
+    PRODUCT=SF Rolled Oats
+    TEXTURE=Tex-Oats
+[Soyamilk]
+    DURATION=120
+    INGREDIENTS=Soyabeans,25% Water,20% Hay or 20% Alfalfa or 30% Oats
+    PRODUCT=SF Soyamilk
+    TEXTURE=Tex-Soyabean
+[Sugar Extract]
+    DURATION=200
+    INGREDIENTS=Sugar Cane,20% Hay or 20% Alfalfa or 30% Oats
+    PRODUCT=Sugar Products
+    TEXTURE=Tex-Cane
+[Sunflower Oil]
+    DURATION=100
+    INGREDIENTS=Sunflower Seeds,20% Hay or 20% Alfalfa or 30% Oats
+    PRODUCT=SF Sunflower Oil
+    TEXTURE=Tex-SunflowerSeeds
+[END]

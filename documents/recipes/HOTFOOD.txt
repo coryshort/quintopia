@@ -1,0 +1,115 @@
+@VER=1
+# Possible Options:
+#  DURATION, INGREDIENTS, PRODUCT, TEXTURE, PRODUCT_PARAMS, REZ_POSITION, SENSOR_DISTANCE
+# Last line has to be [END]
+[Gruel]
+    DURATION=120
+    INGREDIENTS=25% Flour,25% Water,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Porridge
+    PRODUCT=SF Gruel
+[Porridge]
+    DURATION=150
+    INGREDIENTS=25% Rolled Oats,25% Milk,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Porridge
+    PRODUCT=SF Porridge
+[Stew]
+    DURATION=200
+    INGREDIENTS=25% Carrots,25% Potatoes,25% Water,Bowl,25% Onions,25% Meat,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Default
+    PRODUCT=SF Bowl of Stew
+[Chowder]
+    DURATION=175
+    INGREDIENTS=25% Water,50% Fish,10% Onions,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Default
+    PRODUCT=SF Chowder
+[Tomato Soup]
+    DURATION=175
+    INGREDIENTS=50% Tomatoes,25% Water,10% Bread,10% Parsley,Bowl,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Toms
+    PRODUCT=SF Tomato Soup
+[Cheesy Tomato Soup]
+    DURATION=175
+    INGREDIENTS=50% Tomatoes,25% Water,10% Bread,10% Cheese,10% Parsley,Bowl,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Toms
+    PRODUCT=SF Cheesy Tomato Soup
+[Baked Potatoes]
+    DURATION=200
+    INGREDIENTS=Potatoes,25% Butter,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Coals
+    PRODUCT=SF Baked Potatoes
+[Grilled Fish]
+    DURATION=120
+    INGREDIENTS=50% Fish,10% Lemons,10% Thyme,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Coals
+    PRODUCT=SF Grilled Fish
+[Meatballs]
+    DURATION=210
+    INGREDIENTS=50% Meat or 50% Ostrich Meat,Tomatoes,Water,50% Onions,25% Basil,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Coals
+    PRODUCT=SF Meatballs
+[Tomato Meatballs]
+    DURATION=210
+    INGREDIENTS=50% Tomatoes,25% Water,50% Meatballs,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Coals
+    PRODUCT=SF Tomato Meatballs
+[Tomato Sauce]
+    DURATION=220
+    INGREDIENTS=Tomatoes,Water,25% Sugar,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Toms
+    PRODUCT=SF Tomato Sauce
+[Stuffed Tomatoes]
+    DURATION=200
+    INGREDIENTS=Tomatoes,25% Cheese,25% Peppers, 25% Onions,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Default
+    PRODUCT=SF Stuffed Tomatoes
+[Stewed Tomatoes]
+    DURATION=200
+    INGREDIENTS=Tomatoes,Water,25% Onions,25% Chives,Bowl,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Toms
+    PRODUCT=SF Stewed Tomatoes
+[Tuna Tomatoes]
+    DURATION=200
+    INGREDIENTS=50% Tuna,25% Tomatoes,25% Water,10% Parsley,10% Salt,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Fish
+    PRODUCT=SF Tuna Tomatoes
+[Fish and Tomatoes]
+    DURATION=200
+    INGREDIENTS=50% Fish or 50% Tuna,25% Tomatoes,25% Water,10% Salt,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Fish
+    PRODUCT=SF Fish and Tomatoes
+[Rice Tomato Egg]
+    DURATION=200
+    INGREDIENTS=50%  Rice,50% Eggs,50% Tomatoes,25% Salt,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Mixed
+    PRODUCT=Rice Tomato Egg
+[Roast Chicken]
+    DURATION=300
+    INGREDIENTS=50% Chicken,25% Dried Oregano or 25% Oregano,50% Apples,25% Salt,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Coals
+    PRODUCT=SF Roast Chicken
+[Roast Beast]
+    DURATION=300
+    INGREDIENTS=50% Beef,50% Potatoes,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Coals
+    PRODUCT=SF Roast Beast (SF Roast Beast Potatoes)
+[Beef in Cherry Sauce]
+    DURATION=300
+    INGREDIENTS=50% Beef,25% Cherries,25% Water,25% Cream,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Coals
+    PRODUCT=SF Beef Cherry Sauce
+[Pork Cutlets]
+    DURATION=300
+    INGREDIENTS=50% Pork,10% Salt,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Coals
+    PRODUCT=SF Pork Cutlets
+[Pork Sausages]
+    DURATION=300
+    INGREDIENTS=50% Pork,25% Onions,10% Chives,10% Salt,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Coals
+    PRODUCT=SF Pork Sausages
+[Meat Skewers]
+    DURATION=300
+    INGREDIENTS=50% Pork or 50% Beef or 50% Meat,25% Onions,25% Tomatoes,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Coals
+    PRODUCT=SF Meat Skewers
+[END]

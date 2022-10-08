@@ -1,0 +1,5 @@
+FARM_CHANNEL = -911201;
+
+energyChannels = [-321321, -449718, -659328];  // [Electric, Gas, Atomic]
+
+energyType = 0; // ENERGY_TYPE=Electric  Can be 'Electric', 'Gas', 'Atomic'     equates to 0, 1, or 2 respectivly

@@ -1,0 +1,95 @@
+@VER=1
+# Possible Options:
+# DURATION, INGREDIENTS, PRODUCT, TEXTURE, PRODUCT_PARAMS, TEXTURE, REZ_POSITION, SENSOR_DISTANCE
+# Last line has to be [END]
+[Sugar]
+DURATION=300
+INGREDIENTS=Sugar Extract,50% Wood or Branches or 25% Firewood
+PRODUCT=SF Sugar
+TEXTURE=Tex-Default
+[Maple Syrup]
+DURATION=3600
+INGREDIENTS=Maple Sap,Water,50% Wood or Branches or 25% Firewood
+PRODUCT=SF Maple Syrup
+TEXTURE=Tex-Default
+[Roast veg]
+DURATION=240
+INGREDIENTS=Potatoes, Carrots or Pumpkin, Peppers, Aubergines or Onions,Parsley or Basil or Rosemary,25% Sunflower Oil,50% Wood or Branches or 25% Firewood
+PRODUCT=SF Roasted veg
+TEXTURE=Tex-Default
+[Bread]
+DURATION=300
+INGREDIENTS=Flour or Buckwheat Flour,Water,50% Sunflower Oil or 50% Olive Oil,50% Wood or Branches or 25% Firewood,10% Salt
+PRODUCT=SF Bread
+TEXTURE=Tex-Bread
+[Apple Pie]
+DURATION=300
+INGREDIENTS=Apples, Water, Flour, 25% Butter, 50% Wood or Branches or 25% Firewood
+PRODUCT=SF Apple pie
+TEXTURE=Tex-Baking
+[Fruit Pie]
+DURATION=300
+INGREDIENTS=Strawberries or Raspberries or Cherries or Apples,Water,Flour,25% Butter,25% Sugar,50% Wood or Branches or 25% Firewood
+PRODUCT=SF Fruit pie
+TEXTURE=Tex-Baking
+[Cherry Cake]
+DURATION=240
+INGREDIENTS=Flour,Eggs,Cherries,Milk or Soyamilk,50% Wood or Branches or 25% Firewood
+PRODUCT=SF Cherry cake
+TEXTURE=Tex-Baking
+[Coffee Cake]
+DURATION=300
+INGREDIENTS=Flour,Eggs,Milk or Soyamilk,Coffee,50% Wood or Branches or 25% Firewood
+PRODUCT=SF Coffee cake
+TEXTURE=Tex-Baking
+[Strawberry Cake]
+DURATION=240
+INGREDIENTS=Flour,Eggs,50% Milk or 50% Soyamilk,Strawberries,50% Wood or Branches or 25% Firewood
+PRODUCT=SF Strawberry cake
+TEXTURE=Tex-Baking
+[Gateaux]
+DURATION=300
+INGREDIENTS=Flour,Eggs,Milk or Soyamilk,Strawberries,Cocoa,50% Wood or Branches or 25% Firewood
+PRODUCT=SF Gateaux
+TEXTURE=Tex-Baking
+[Baked Potatoes]
+DURATION=200
+INGREDIENTS=Potatoes,25% Butter,50% Wood or Branches or 25% Firewood
+PRODUCT=SF Baked Potatoes
+TEXTURE=Tex-Default
+[Meatballs]
+DURATION=210
+INGREDIENTS=50% Meat or 50% Ostrich Meat,Tomatoes,Water,50% Onions,25% Basil,50% Wood or Branches or 25% Firewood
+PRODUCT=SF Meatballs
+TEXTURE=Tex-Default
+[Stuffed Tomatoes]
+DURATION=210
+INGREDIENTS=Tomatoes,Rice,50% Cheese,25% Peppers or 25% Peas,25% Onions,50% Wood or Branches or 25% Firewood
+PRODUCT=SF Stuffed Tomatoes
+TEXTURE=Tex-Default
+[Turkey Dinner]
+DURATION=300
+INGREDIENTS=50% Turkey Meat,Potatoes,Corn,Peas,Cranberry Sauce,50% Wood or Branches or 25% Firewood
+PRODUCT=SF Turkey Dinner
+TEXTURE=Tex-Meat
+[Roast Chicken]
+DURATION=300
+INGREDIENTS=50% Chicken,25% Dried Oregano or 25% Oregano,50% Apples,25% Salt,50% Wood or Branches or 25% Firewood
+PRODUCT=SF Roast Chicken
+TEXTURE=Tex-Meat
+[Roast Swan]
+DURATION=300
+INGREDIENTS=50% Swan Meat,25% Dried Rosemary or 25% Rosemary, 25% Sage or 25% Dried Sage,50% Apples or 50% Pears,10% Cranberries,10% Salt,10% Wood or Branches or 25% Firewood
+PRODUCT=SF Roast Duck
+TEXTURE=Tex-Meat
+[Roast Duck]
+DURATION=300
+INGREDIENTS=50% Duck Meat,25% Dried Ginger or 25% Ginger,50% Oranges,25% Honey or 25% Maple Syrup,50% Wood or Branches or 25% Firewood
+PRODUCT=SF Roast Duck
+TEXTURE=Tex-Meat
+[Duck & Cherry Sauce]
+DURATION=300
+INGREDIENTS=50% Duck Meat,50% Cherries,Water,50% Milk or 50% Soyamilk,10% Cognac,50% Wood or Branches or 25% Firewood
+PRODUCT=SF Duck & Cherry Sauce
+TEXTURE=Tex-Meat
+[END]

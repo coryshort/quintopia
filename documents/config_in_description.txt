@@ -1,0 +1,35 @@
+PRODUCTS 
+0 P 			Always P (for product)
+
+
+TREES & PLANTS
+0 T 			Always T (for Tree but also plants so 'P' used by products)
+1 Plant name 	SF Peppers etc
+2 Status 		New, Growing or Ripe
+3 Status left 	Time in Seconds before ripe
+4 Water 		% water (0 is none, 100 is fully watered)
+5 wood 			% towards having wood ready
+6 Plant 		Name of crop produced e.g. Peppers
+7 Auto water 	
+
+
+T;SF Peppers;Growing;30000;86;100;Peppers;-14242540;0
+autoWater = llList2Integer(desc, 8);
+
+
+====================================================================
+
+
+ANIMAL CONFIG STORED IN DESCRIPTION
+
+AX;sex;water;food;createdTs;chan;geneA;geneB;fatherGene;pregnantTs;name;
+
+// as of version 5.5 onwards adds:
+version;radius;surface;chatty;language;givenBirth;epoch;
+
+// since won't all fit in single desc (max 128 chars) put remaining data on another prim
+DP;labelType;initpos;scaleFactor;autoPoo;savedRot;savedPos;SLEEP_MODE;feedPet;immobile
+
+
+
+791

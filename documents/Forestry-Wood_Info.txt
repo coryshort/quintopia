@@ -1,0 +1,18 @@
+BY-PRODUCTS
+ Leaves
+ Twigs
+ Branches
+ Firewood Logs
+
+GROWN PRODUCTS
+ Logs
+ Wood
+
+MANUFACTURED PRODUCTS
+ Planks
+ Sawdust
+
+
+# firewood_product    = SF Firewood Logs   &  SF Sawdust
+# plank_product       = SF Planks          &  SF Sawdust
+# wood_product        = SF Wood            &  SF Sawdust

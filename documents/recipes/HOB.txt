@@ -1,0 +1,85 @@
+@VER=1
+# Possible Options:
+# DURATION, INGREDIENTS, PRODUCT, TEXTURE, PRODUCT_PARAMS, TEXTURE, REZ_POSITION, SENSOR_DISTANCE
+# Last line has to be [END]
+[Veg stew]
+    DURATION=180
+    INGREDIENTS=Aubergines,50% Chillies,50% Potatoes,50% Onions,25% Parsley,25% Coriander,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Stew
+    TEXTURE=Tex-Default
+[Chik curry]
+    DURATION=180
+    INGREDIENTS=50% Chillies,50% Onions,50% Carrots,Tomatoes,25% Coriander,25% Chives,50% Chicken,50% Rice,25% Milk,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Chicken curry
+    TEXTURE=Tex-Stew
+[Fish Stew]
+    DURATION=180
+    INGREDIENTS=50% Fish,Tomatoes,Water,25% Parsley,25% Salt,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Fish Stew
+    TEXTURE=Tex-Fish
+[Boiled Rice]
+    DURATION=180
+    INGREDIENTS=Water,Rice,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Boiled Rice
+    TEXTURE=Tex-Rice
+[Pasta]
+    DURATION=180
+    INGREDIENTS=Water,Eggs,Flour,25% Basil,Tomatoes,Sunflower Oil or Olive Oil,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Pasta
+    TEXTURE=Tex-Pasta
+[Fries]
+    DURATION=200
+    INGREDIENTS=Potatoes,Sunflower Oil or Olive Oil,10% Salt,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Fries
+    TEXTURE=Tex-Fry
+[Cheesy fries]
+    DURATION=220
+    INGREDIENTS=Potatoes,Sunflower Oil or Olive Oil,Cheese,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Cheesy fries
+    TEXTURE=Tex-Fry
+[Tomato Soup]
+    DURATION=200
+    INGREDIENTS=Tomatoes,Water,Bread,25% Parsley,Bowl,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Tomato Soup
+    TEXTURE=Tex-Default
+[Deluxe Tomato Soup]
+    DURATION=220
+    INGREDIENTS=Tomatoes,Water,Cheese Toast,25% Tomato Sauce,25% Chives,Bowl,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Deluxe Tomato Soup
+    TEXTURE=Tex-Default
+[Stewed Tomatoes]
+    DURATION=200
+    INGREDIENTS=Tomatoes,Water,25% Onions,25% Chives,Bowl,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Stewed Tomatoes
+    TEXTURE=Tex-Default
+[Tomato Sauce]
+    DURATION=220
+    INGREDIENTS=Tomatoes,Water,25% Sugar,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Tomato Sauce
+    TEXTURE=Tex-Default
+[Fruit Jam]
+    DURATION=400
+    INGREDIENTS=Strawberries or Raspberries or Blackberries or Cherries or Figs, 25% Sugar or 25% Honey or 25% Maple Syrup,  25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Jam
+    TEXTURE=Tex-Default
+[Cranberry Sauce]
+    DURATION=330
+    INGREDIENTS=Cranberries,5% Orange Juice,25% Sugar,5% Wine,50% Ginger,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Cranberry Sauce
+    TEXTURE=Tex-Default
+[Curd]
+    DURATION=200
+    INGREDIENTS=Milk,25% Salt,Rennet,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Curd
+    TEXTURE=Tex-Curd
+[Tofu]
+    DURATION=200
+    INGREDIENTS=Soyamilk,25% Salt,25% Lemon Juice,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Tofu
+    TEXTURE=Tex-Curd
+[Salt]
+    DURATION=200
+    INGREDIENTS=Sea Water,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Salt
+    TEXTURE=Tex-Salt
+[END]

@@ -1,0 +1,40 @@
+@VER=1
+# Possible Options:
+#  DURATION, INGREDIENTS, PRODUCT, TEXTURE, PRODUCT_PARAMS, TEXTURE, REZ_POSITION, SENSOR_DISTANCE
+# Last line has to be [END]
+[Black Coffee]
+    DURATION=100
+    INGREDIENTS=25% Coffee,50% Water,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Coffee
+    PRODUCT=SF Black Coffee
+[Cappuccino]
+    DURATION=100
+    INGREDIENTS=25% Coffee,25% Sugar, 50% Water, 25% Milk or 25% Soyamilk,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Coffee
+    PRODUCT=SF Cappuccino
+[Latte]
+    DURATION=100
+    INGREDIENTS=25% Coffee, 50% Milk or 50% Soyamilk,25 %Sugar,50% Water,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Coffee
+    PRODUCT=SF Latte
+[Pot of Tea]
+    DURATION=100
+    INGREDIENTS=Tea Leaves,75% Water,50% Sugar, 75% Milk or 75% Soyamilk,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Coffee
+    PRODUCT=SF Teapot
+[Cup of Tea]
+    DURATION=100
+    INGREDIENTS=25% Tea Leaves,50% Water,25% Sugar, 50% Milk or 50% Soyamilk,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Coffee
+    PRODUCT=SF Tea
+[Green Tea]
+    DURATION=100
+    INGREDIENTS=25% Tea Leaves,50% Water,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Green
+    PRODUCT=SF Green Tea
+[Hot Chocolate]
+    DURATION=100
+    INGREDIENTS=25% Milk or 25% Soyamilk, 25% Cocoa, 25% Honey,25% Wood or Branches or 20% Firewood Logs
+    TEXTURE=Tex-Coffee
+    PRODUCT=SF Hot Chocolate
+[END]

@@ -1,0 +1,45 @@
+@VER=1
+# Possible Options:
+# DURATION, INGREDIENTS, PRODUCT, TEXTURE, PRODUCT_PARAMS, TEXTURE, REZ_POSITION, SENSOR_DISTANCE
+# Last line has to be [END]
+[Veggie Omelette]
+    DURATION=140
+    INGREDIENTS=50% Aubergines or 50% Peppers or 50% Pumpkin ,25% Milk or 25% Soyamilk,Eggs,25% Peas or 25% Onions,25% Parsley or 25% Coriander,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Veggie Omelette
+    TEXTURE=Tex-Default
+[Egg & Chips]
+    DURATION=150
+    INGREDIENTS=50% Potatoes,50% Eggs,25% Sunflower Oil or 25% Olive Oil,25% Tomato Sauce,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Egg & Chips
+    TEXTURE=Tex-Eggs
+[Ostrich Steak]
+    DURATION=140
+    INGREDIENTS=50% Ostrich Meat,25% Sunflower Oil or 25% Olive Oil,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Ostrich Steak
+    TEXTURE=Tex-Meat
+[Breaded Ostrich]
+    DURATION=140
+    INGREDIENTS=50% Ostrich Meat,25% Bread,25% Sunflower Oil or 25% Olive Oil,50% Dried Rosemary or 50% Rosemary,25% Salt,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Breaded Ostrich
+    TEXTURE=Tex-Meat
+[Steak & Eggs]
+    DURATION=150
+    INGREDIENTS=50% Beef or 50% Meat,50% Eggs,25% Sunflower Oil or 25% Olive Oil,25% Salt,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Steak & Eggs
+    TEXTURE=Tex-Meat
+[Fried Breakfast]
+    DURATION=150
+    INGREDIENTS=50% Pork or 50% Lamb or 50% Meat,50% Eggs,25% Bread,25% Butter,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Fried Breakfast
+    TEXTURE=Tex-Eggs
+[Grilled Fish]
+    DURATION=150
+    INGREDIENTS=Fish,25% Lemons or 25% Limes, 25% Thyme or 25% Dried Thyme,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Grilled Fish
+    TEXTURE=Tex-Fish
+[Poached Fish]
+    DURATION=150
+    INGREDIENTS=Fish,Sun Dried Tomatoes,25% Milk or 25% Soyamilk,25% Dried Dill,25% Salt,25% Wood or Branches or 10% Firewood
+    PRODUCT=SF Poached Fish
+    TEXTURE=Tex-Fish
+[END]
