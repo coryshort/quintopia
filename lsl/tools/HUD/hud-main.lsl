@@ -1,5 +1,3 @@
-string TXT_TESTER = "TESTER";
-
 // CHANGE LOG
 //  Load and Save functions added to Options menu (saves to Quintonia database server)
 //  Provisions feature now allows storing items less than 100%
@@ -18,8 +16,10 @@ string TXT_BACKUP    = "Backup";
 string TXT_COLLECTOR = "Pitchfork";
 string TXT_POWER     = "Power";
 //
+string TXT_TESTER = "TESTER";     // For testing purposes
+//
 // Changed text
-string TXT_WARNING_RESET="WARNING - The key for your locked provision boxes will be reset and you won't be able to open any that are locked after this reset....";
+string TXT_WARNING_RESET="WARNING - The key for your locked provision boxes will be reset and you won't be able to open any that are locked after this reset...";
 string TXT_REZ_POWER="Rez Power";   // was string TXT_REZ_KWH="Rez kWh";
 string TXT_NOT_CONSUMABLE="Nothing useable found in";
 
@@ -27,8 +27,8 @@ string TXT_NOT_CONSUMABLE="Nothing useable found in";
 //  QUINTONIA FARM HUD - Main script
 // ------------------------------------
 // VERSION & NAME used to check for updates from Quintonia product update server
-float  VERSION = 5.5;               // 7 October 2022
-string subVersion = "Pre-release";  // Set to "" for release
+float  VERSION = 5.5;           // 9 October 2022
+string subVersion = "";         // Set to "" for release
 string NAME = "SFQ Main-HUD";
 //
 integer DEBUGMODE = FALSE;     // Set this if you want to force startup in debug mode
@@ -271,8 +271,8 @@ integer energyStore = 0;
 integer provLocked = FALSE;
 integer interaction;
 integer hudSpacing;
-string  pubKey = "";
-string  privKey = "";
+string  pubKey = "-";
+string  privKey = "-";
 integer AFK = FALSE;
 integer OOC = FALSE;
 integer active = TRUE;
@@ -481,7 +481,7 @@ setConfig(string line)
         }
         else if (cmd == "DEBUG")
         {
-            // If we have debug mode set as 1 in the code, thne keep it, otherwise use the setting found in the config notecard
+            // If we have debug mode set as 1 in the code, then keep it, otherwise use the setting found in the config notecard
             if (DEBUGMODE == FALSE) DEBUGMODE = (integer)val;
         }
         llMessageLinked(LINK_SET, useOsExtra, "B_TARGETS|"+SF_PREFIX+"|"+llDumpList2String(targets, "|"), "");
@@ -576,7 +576,7 @@ string vals2Desc()
                       +(string)healthMode +";" +llRound(energy) +";" +(string)OOC +";" +languageCode +";"
                       +(string)hudSpacing +";" +(string)echoChat +";" +(string)statusHudVisible +";" +(string)energyStore;
         llSetObjectDesc(result);
-    }
+    }   
     return result;
 }
 
@@ -593,7 +593,7 @@ backupNC()
 */
 }
 
-// Save the current settings and values to the notecard
+// Save the current settings and values
 saveState()
 {
     if (safetyCheck == FALSE)
@@ -1781,7 +1781,7 @@ startUp()
     loadLanguage(languageCode);
     llMessageLinked(LINK_THIS, 1, "LANG_MENU|" + SUFFIX, "");
     refresh();
-    if (pubKey == "") makeKeySet();
+    if (pubKey == "-") makeKeySet();
     setBorder(borderColour);
     if (healthMode == TRUE)
     {
@@ -2219,7 +2219,7 @@ default
                     opts +="+"+TXT_DEBUG;
                 }
                 opts += [TXT_RESET, TXT_CLOSE];
-opts += TXT_TESTER;                 
+                if (DEBUGMODE == TRUE) opts += TXT_TESTER;                 
                 status = "advancedMenu";
                 startListen();
                 llDialog(id, "\n"+TXT_ADVANCED, opts, chan(llGetKey()));
@@ -3344,7 +3344,7 @@ opts += TXT_TESTER;
         }
         else if (change & CHANGED_OWNER)
         {
-            privKey ="";
+            privKey ="-";
             llResetScript();
         }
         else if (change & CHANGED_INVENTORY)
