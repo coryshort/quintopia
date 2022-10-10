@@ -27,7 +27,7 @@ string TXT_NOT_CONSUMABLE="Nothing useable found in";
 //  QUINTONIA FARM HUD - Main script
 // ------------------------------------
 // VERSION & NAME used to check for updates from Quintonia product update server
-float  VERSION = 5.5;           // 9 October 2022
+float  VERSION = 5.5;           // 10 October 2022
 string subVersion = "";         // Set to "" for release
 string NAME = "SFQ Main-HUD";
 //
@@ -942,7 +942,7 @@ addLine(string line, integer clearScreen)
   floatText(output, WHITE, 1);
 }
 
-healthMode(integer level)
+setHealthMode(integer level)
 {
     healthMode = level;
     if (healthMode == 0)
@@ -2449,11 +2449,11 @@ default
             }
             else if (m == "-"+TXT_HEALTH_MODE)
             {
-                healthMode(0);
+                setHealthMode(0);
             }
             else if (m == "+"+TXT_HEALTH_MODE)
             {
-                healthMode(1);
+                setHealthMode(1);
             }
             else if (m == "-"+TXT_AFK)
             {
@@ -3223,7 +3223,7 @@ default
                         refresh();
                         showStatus(getVersionText());
                         postMessage("task=getprovs&data1="+(string)userID, "");
-                        healthMode(healthMode);
+                        setHealthMode(healthMode);
                     }
                     else
                     {
