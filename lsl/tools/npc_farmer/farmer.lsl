@@ -1,10 +1,17 @@
+// CHANGE LOG
+//  Added detection and action for cleaning up dead plants
+//
+// New text
+string TXT_DEAD = "This is dead!";
+//
+
 // farmer.lsl
 // NPC Farmer for Satyr Farm
 //  Part of the  SatyrFarm scripts.  This code is provided under a CC-BY-NC license
 //  Mods by Cnayl Rainbow, worlds.quintonia.net:8002
 
 // Used to check for updates from Quintonia product update server
-float VERSION = 5.2;  // 5 September 2022
+float VERSION = 5.3;  // 12 October 2022
 string NAME = "SF Farmer NPC";
 
 integer DEBUGMODE = FALSE;
@@ -225,6 +232,7 @@ loadLanguage(string langCode)
                     else if (cmd == "TXT_EMPTY") TXT_EMPTY = val;
                     else if (cmd == "TXT_NEEDS_WATER") TXT_NEEDS_WATER = val;
                     else if (cmd == "TXT_CLEANUP") TXT_CLEANUP = val;
+                    else if (cmd == "TXT_DEAD") TXT_DEAD = val;
                     else if (cmd == "TXT_CREATING") TXT_CREATING = val;
                     else if (cmd == "TXT_WAITING") TXT_WAITING = val;
                     else if (cmd == "TXT_CONTROL") TXT_CONTROL = val;
@@ -371,11 +379,11 @@ handleTree(key u)
             {
                 doTouch(u);
                 say(TXT_ADDING+" "+llKey2Name( llList2Key(myProducts,ip)));
-                llSleep(1.);
+                llSleep(1.0);
                 chanSay(chan(u), "Add Product");
-                llSleep(1.);
+                llSleep(1.0);
                 chanSay(chan(u), llGetSubString( llKey2Name( llList2Key(myProducts,ip)), 3, -1) ); // Product name
-                llSleep(2.);
+                llSleep(2.0);
             }
             myProducts = [];
         }
@@ -390,11 +398,11 @@ handleTree(key u)
             {
                 doTouch(u);
                 say(TXT_ADDING+" "+llKey2Name( llList2Key(myProductsAlt,ip)));
-                llSleep(1.);
+                llSleep(1.0);
                 chanSay(chan(u), "Add Product");
-                llSleep(1.);
+                llSleep(1.0);
                 chanSay(chan(u), llGetSubString( llKey2Name( llList2Key(myProductsAlt,ip)), 3, -1) ); // Product name
-                llSleep(2.);
+                llSleep(2.0);
             }
             myProductsAlt = [];
         }
@@ -453,11 +461,31 @@ handleTree(key u)
             say (TXT_RIPE);
             productName = llList2String(p,1);
             doTouch(u);
-            llSleep(1.);
+            llSleep(1.0);
             chanSay(chan(u), "Harvest");
             llSetTimerEvent(10);
             tries = 2;
             waitForItem = productName;
+        }
+        else if (llList2String(p,0) == "T" && llList2String(p,2) == "Dead")  
+        {
+            say (TXT_DEAD);
+            doTouch(u);
+            llSleep(1.0);
+            chanSay(chan(u), "Cleanup");
+            if (llList2Integer(p,4) <30)  // Water level
+            {
+                if (myWater != NULL_KEY)
+                {
+                    say(TXT_NEEDS_WATER);
+                    myWater = NULL_KEY;
+                    doTouch(u);
+                    llSleep(1.0);
+                    chanSay(chan(u), "Water");
+                    llSleep(1.0);
+                }
+            }
+            llSetTimerEvent(10);
         }
         else if (llList2String(p,0) == "T" && llList2String(p,2) == "Empty")
         {
@@ -472,11 +500,11 @@ handleTree(key u)
             if (what !="")
             {
                 doTouch(u);
-                llSleep(1.);
+                llSleep(1.0);
                 chanSay(chan(u), "Plant");
-                llSleep(1.);
+                llSleep(1.0);
                 chanSay(chan(u), what);
-                llSleep(1.);
+                llSleep(1.0);
             }
        }
        else if (llList2String(p,0) == "F" && llList2Integer(p,2) <30) // Feeder
@@ -486,9 +514,9 @@ handleTree(key u)
                 say(TXT_NEEDS_WATER);
                 myWater = NULL_KEY;
                 doTouch(u);
-                llSleep(1.);
+                llSleep(1.0);
                 chanSay(chan(u), "Add Water");
-                llSleep(2.);
+                llSleep(2.0);
            }
        }
        else if (llList2String(p,0) == "T" && llList2Integer(p,4) <30)  // Plant
@@ -498,11 +526,12 @@ handleTree(key u)
                 say(TXT_NEEDS_WATER);
                 myWater = NULL_KEY;
                 doTouch(u);
-                llSleep(1.);
+                llSleep(1.0);
                 chanSay(chan(u), "Water");
-                llSleep(2.);
+                llSleep(2.0);
            }
        }
+       
     }
 }
 
@@ -541,7 +570,7 @@ doRezNpc()
     }
     llSay(0, TXT_CREATING);
     llSetObjectName("SF NPC Controller");
-    llSleep(1.);
+    llSleep(1.0);
     unpc = osNpcCreate(firstName, lastName,  llGetPos()+<2,0,1>, "npc-"+firstName,  8);  // 8 = OS_NPC_GROUP
     llSay(0, TXT_WAITING);
     llSetObjectDesc("N;" + languageCode + ";" + (string)unpc + ";" +firstName);
@@ -604,6 +633,7 @@ default
 {
     on_rez(integer n)
     {
+        llGiveInventory(llGetOwner(), "All_NPCs");
         llResetScript();
     }
 
@@ -924,7 +954,7 @@ default
                     {
                         anim("express_shrug");
                     }
-                    if (llFrand(1.)<.5) 
+                    if (llFrand(1.0) < 0.5) 
                     {
                        sound();
                     }
