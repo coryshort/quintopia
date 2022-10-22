@@ -1,12 +1,17 @@
+// CHANGE LOG
+//  Added support to auto-detect physics and also allow user to set in config notecard 
+
 // horse_vehicle.lsl
-// Version 1.0   8 November 2020
+// Version 2.0   22 November 2022
 
 // Config notecard variables
-vector  sitOffset = <1.9, 0, 0.3>;   // SIT_OFFSET=<1.9, 0, 0.3>
+vector  sitOffset = <1.9, 0, 0.3>;          // SIT_OFFSET=<1.9, 0, 0.3>
+string  physics_engine_type = "BulletSim";  // PHYSICS=BulletSim          // BulletSim or ubODE
 
-float   linear = 12;                 // Power used to go forward (1 to 30)
-float   reverse_power = -5;          // Power used to go reverse (-1 to -30)
-float   turning_ratio = 2.0;         // How sharply the vehicle turns. Less is more sharply. (.1 to 10)
+float   linear = 12;                        // Power used to go forward (1 to 30)
+float   reverse_power = -5;                 // Power used to go reverse (-1 to -30)
+float   turning_ratio = 2.0;                // How sharply the vehicle turns. Less is more sharply. (.1 to 10)
+
 //
 float   speedmult = 1.0;
 integer toggle;
@@ -19,6 +24,8 @@ string  anMan;
 integer avatarLink = 1;
 integer horseLink = 2;
 string  wheelName = "wheel";
+
+
 
 loadConfig()
 {
@@ -37,11 +44,18 @@ loadConfig()
                 {
                     string cmd=llStringTrim(llList2String(tok, 0), STRING_TRIM);
                     string val=llStringTrim(llList2String(tok, 1), STRING_TRIM);
-                         if (cmd == "SIT_OFFSET")     sitOffset = (vector)val;
+                    if (cmd == "SIT_OFFSET")
+                    {
+                        sitOffset = (vector)val;
+                        if (sitOffset == <0, 0, 0>) sitOffset = <0, 0, 0.1>;
+                    }
+                    else if (cmd == "PHYSICS")
+                    {
+                        if (llToLower(val) == "bulletsim") physics_engine_type = "BulletSim"; else physics_engine_type = "ubODE";
+                    }
                 }
             }
         }
-        if (sitOffset == <0, 0, 0>) sitOffset = <0, 0, 0.1>;
     }
 }
 
@@ -117,10 +131,23 @@ switchAnims(string status )
 init()
 {
     loadConfig();
+    
     // forward-back,left-right,updown
     llSitTarget(sitOffset, ZERO_ROTATION );
 
-    llSetLinkPrimitiveParamsFast(LINK_ALL_CHILDREN, [PRIM_PHYSICS_SHAPE_TYPE, PRIM_PHYSICS_SHAPE_NONE]);
+    // Try to auto detect physics engine. If it fails just use value from config notecard 
+    string physicsEng = osGetPhysicsEngineType();
+    if (physicsEng != "") physics_engine_type = physicsEng;
+    // Set to match physics type of bulletsim or ubode
+    if (physics_engine_type == "BulletSim")
+    {
+        llSetLinkPrimitiveParamsFast(LINK_ALL_CHILDREN, [PRIM_PHYSICS_SHAPE_TYPE, PRIM_PHYSICS_SHAPE_NONE]);
+    }
+    else
+    {
+        llSetLinkPrimitiveParamsFast(LINK_ALL_CHILDREN, [PRIM_PHYSICS_SHAPE_TYPE, PRIM_PHYSICS_SHAPE_CONVEX, PRIM_PHANTOM, 0 ]);
+    }
+
     llSetVehicleFlags(0);
     llSetVehicleType(VEHICLE_TYPE_CAR);
     llSetVehicleFlags(VEHICLE_FLAG_HOVER_UP_ONLY );
@@ -166,6 +193,7 @@ default
     state_entry()
     {
         init();
+        llOwnerSay("Physics type:" +physics_engine_type);
     }
 
     changed(integer change)
